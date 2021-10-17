@@ -8,16 +8,6 @@
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#fff",
-      "dark": {
-        "image": "./assets/images/splash-dark.png",
-        "resizeMode": "contain",
-        "backgroundColor": "#333333"
-      }
-    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },

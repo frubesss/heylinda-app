@@ -11,13 +11,24 @@ import useColorScheme from './hooks/useColorScheme'
 import Navigation from './navigation'
 import { store, persistor } from './redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
+import { Image } from 'react-native'
 
 export default function App() {
   const isLoadingComplete = useCachedResources()
   const colorScheme = useColorScheme()
 
   if (!isLoadingComplete) {
-    return null
+    return colorScheme === 'light' ? (
+      <Image
+        source={require('./assets/images/splash.png')}
+        style={{ flex: 1, width: '100%', height: '100%' }}
+      />
+    ) : (
+      <Image
+        source={require('./assets/images/splash-dark.png')}
+        style={{ flex: 1, width: '100%', height: '100%' }}
+      />
+    )
   } else {
     return (
       <Provider store={store}>
